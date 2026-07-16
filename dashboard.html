@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aigle Royal Management System | Dashboard</title>
+
+
+<!-- POLICE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<!-- ICONES -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+<!-- STYLE DASHBOARD -->
+<link rel="stylesheet" href="assets/css/dashboard.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- ==============================
+        SIDEBAR
+================================ -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<img src="assets/image/LOGO  1.jpg" alt="Logo Aigle Royal">
+
+
+<div>
+
+<h2>AIGLE ROYAL</h2>
+
+<span>Music Gospel</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="profile-mini">
+
+
+<img src="assets/image/PRODU.png">
+
+
+<div>
+
+<h4>IGUNDA BENEDICTION</h4>
+
+<p>Administrateur</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<nav>
+
+
+<ul>
+
+
+<li class="active">
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Tableau de bord</span>
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="pages/membres.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>Membres</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/departements.html">
+
+<i class="fa-solid fa-building"></i>
+
+<span>Départements</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/presences.html">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+<span>Présences</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/rapports.html">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+<span>Rapports</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/reunions.html">
+
+<i class="fa-solid fa-users-rectangle"></i>
+
+<span>Réunions</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/calendrier.html">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+<span>Calendrier</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/artistes.html">
+
+<i class="fa-solid fa-microphone"></i>
+
+<span>Artistes</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/studio.html">
+
+<i class="fa-solid fa-music"></i>
+
+<span>Studio</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/medias.html">
+
+<i class="fa-solid fa-photo-film"></i>
+
+<span>Médias</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/documents.html">
+
+<i class="fa-solid fa-folder-open"></i>
+
+<span>Documents</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/statistiques.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>Statistiques</span>
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="pages/parametres.html">
+
+<i class="fa-solid fa-gear"></i>
+
+<span>Paramètres</span>
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+
+
+<div class="logout">
+
+
+<a href="login.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Déconnexion
+
+</a>
+
+
+</div>
+
+
+
+</aside>
+
+
+
+
+
+<!-- ==============================
+        CONTENU PRINCIPAL
+================================ -->
+
+
+<main class="main-content">
+
+
+
+<header class="topbar">
+
+
+<div class="menu-toggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+
+
+<div class="welcome">
+
+
+<h1>
+
+Bonjour, IGUNDA BENEDICTION 👋
+
+</h1>
+
+
+<p>
+
+Bienvenue dans votre espace de gestion Aigle Royal Music Gospel.
+
+</p>
+
+
+</div>
+
+
+
+<div class="top-actions">
+
+
+
+<div class="search-box">
+
+
+<i class="fa-solid fa-search"></i>
+
+
+<input type="text" placeholder="Rechercher...">
+
+
+</div>
+
+
+
+
+
+<div class="notification">
+
+
+<i class="fa-solid fa-bell"></i>
+
+<span>5</span>
+
+
+</div>
+
+
+
+
+
+<div class="message">
+
+
+<i class="fa-solid fa-envelope"></i>
+
+
+<span>3</span>
+
+
+</div>
+
+
+
+
+
+<div class="date-box">
+
+
+<i class="fa-solid fa-calendar"></i>
+
+
+<span id="date"></span>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</header>
+<!-- =====================================
+        STATISTIQUES PRINCIPALES
+===================================== -->
+
+
+<section class="statistics">
+
+
+<div class="stat-card red-gradient">
+
+
+<div class="icon">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+
+<div>
+
+<h2>152</h2>
+
+<p>Total Membres</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card blue-gradient">
+
+
+<div class="icon">
+
+<i class="fa-solid fa-user-check"></i>
+
+</div>
+
+
+<div>
+
+<h2>98</h2>
+
+<p>Présents Aujourd'hui</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card green-gradient">
+
+
+<div class="icon">
+
+<i class="fa-solid fa-file-lines"></i>
+
+</div>
+
+
+<div>
+
+<h2>24</h2>
+
+<p>Rapports envoyés</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card gold-gradient">
+
+
+<div class="icon">
+
+<i class="fa-solid fa-building"></i>
+
+</div>
+
+
+<div>
+
+<h2>12</h2>
+
+<p>Départements</p>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- =====================================
+        ZONE PRINCIPALE
+===================================== -->
+
+
+<section class="dashboard-content">
+
+
+
+
+
+<!-- ===============================
+        PRESENCES
+================================ -->
+
+
+<div class="panel presence-panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Présences du jour
+
+</h2>
+
+
+
+<a href="pages/presences.html">
+
+Voir tout
+
+</a>
+
+
+</div>
+
+
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Nom</th>
+
+<th>Département</th>
+
+<th>Heure</th>
+
+<th>Statut</th>
+
+</tr>
+
+</thead>
+
+
+
+
+<tbody>
+
+
+<tr>
+
+<td>
+
+<div class="member">
+
+<img src="assets/image/10.jpeg">
+
+kabuya francois
+
+</div>
+
+</td>
+
+
+<td>Média</td>
+
+
+<td>08:15</td>
+
+
+<td>
+
+<span class="status present">
+
+Présent
+
+</span>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+<tr>
+
+<td>
+
+<div class="member">
+
+<img src="assets/image/IMG-20260127-WA0443 - Copie.jpg">
+
+Amani Rosette
+
+</div>
+
+</td>
+
+
+<td>Musiciens</td>
+
+
+<td>08:45</td>
+
+
+<td>
+
+<span class="status late">
+
+Retard
+
+</span>
+
+</td>
+
+
+</tr>
+
+
+
+
+
+
+
+<tr>
+
+<td>
+
+<div class="member">
+
+<img src="assets/image/PRODU.png">
+
+Producteur Jonathan
+
+</div>
+
+</td>
+
+
+<td>Artiste</td>
+
+
+<td>--</td>
+
+
+<td>
+
+<span class="status absent">
+
+Absent
+
+</span>
+
+</td>
+
+
+</tr>
+
+
+
+</tbody>
+
+
+</table>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ===============================
+        ACTIVITES
+================================ -->
+
+
+<div class="panel activity-panel">
+
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-list-check"></i>
+
+Activités récentes
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="timeline">
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="circle red">
+
+<i class="fa-solid fa-microphone"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Répétition générale
+
+</h4>
+
+
+<p>
+
+Département Musique • 08:00
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="circle blue">
+
+<i class="fa-solid fa-video"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Production vidéo
+
+</h4>
+
+
+<p>
+
+Département Média • 11:00
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="circle green">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Réunion coordination
+
+</h4>
+
+
+<p>
+
+Direction • 16:00
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="timeline-item">
+
+
+<div class="circle gold">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Session studio
+
+</h4>
+
+
+<p>
+
+Producteur • 18:00
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+<!-- =====================================
+        SECTION BAS DU DASHBOARD
+===================================== -->
+
+
+<section class="bottom-grid">
+
+
+
+
+
+<!-- ===============================
+        CALENDRIER
+================================ -->
+
+
+<div class="panel calendar-panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Calendrier
+
+</h2>
+
+
+<button>
+
+Aujourd'hui
+
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="calendar">
+
+
+<div class="calendar-head">
+
+<span>Lun</span>
+
+<span>Mar</span>
+
+<span>Mer</span>
+
+<span>Jeu</span>
+
+<span>Ven</span>
+
+<span>Sam</span>
+
+<span>Dim</span>
+
+
+</div>
+
+
+
+
+
+<div class="days">
+
+
+<span>1</span>
+
+<span>2</span>
+
+<span>3</span>
+
+<span>4</span>
+
+<span>5</span>
+
+<span>6</span>
+
+<span>7</span>
+
+<span>8</span>
+
+<span>9</span>
+
+<span>10</span>
+
+<span>11</span>
+
+<span>12</span>
+
+<span class="active-day">
+
+15
+
+</span>
+
+<span>16</span>
+
+<span>17</span>
+
+<span>18</span>
+
+<span>19</span>
+
+<span>20</span>
+
+<span>21</span>
+
+<span>22</span>
+
+<span>23</span>
+
+<span>24</span>
+
+<span>25</span>
+
+<span>26</span>
+
+<span>27</span>
+
+<span>28</span>
+
+<span>29</span>
+
+<span>30</span>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<div class="upcoming">
+
+
+<h4>
+
+Prochains événements
+
+</h4>
+
+
+<div>
+
+<i class="fa-solid fa-circle red"></i>
+
+Concert Gospel - 20 Juillet
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-circle blue"></i>
+
+Réunion Direction - 22 Juillet
+
+</div>
+
+
+<div>
+
+<i class="fa-solid fa-circle green"></i>
+
+Formation Musiciens - 25 Juillet
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ===============================
+        RAPPORTS RECENTS
+================================ -->
+
+
+<div class="panel reports-panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-file-lines"></i>
+
+Derniers rapports
+
+</h2>
+
+
+<a href="pages/rapports.html">
+
+Tous les rapports
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="report-card">
+
+
+<div class="report-icon red">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Rapport Secrétariat
+
+</h4>
+
+
+<p>
+
+15 Juillet 2026
+
+</p>
+
+</div>
+
+
+<span class="approved">
+
+Validé
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="report-card">
+
+
+<div class="report-icon blue">
+
+<i class="fa-solid fa-video"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Rapport Média
+
+</h4>
+
+
+<p>
+
+15 Juillet 2026
+
+</p>
+
+</div>
+
+
+<span class="waiting">
+
+Attente
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<div class="report-card">
+
+
+<div class="report-icon green">
+
+<i class="fa-solid fa-music"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Rapport Musiciens
+
+</h4>
+
+
+<p>
+
+14 Juillet 2026
+
+</p>
+
+</div>
+
+
+<span class="approved">
+
+Validé
+
+</span>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================
+        DEPARTEMENTS
+===================================== -->
+
+
+<section class="departments-section">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-building"></i>
+
+Départements actifs
+
+</h2>
+
+
+<a href="pages/departements.html">
+
+Gérer
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="department-cards">
+
+
+
+<div class="department">
+
+<i class="fa-solid fa-pen"></i>
+
+<h4>
+
+Secrétariat
+
+</h4>
+
+<p>
+
+12 membres
+
+</p>
+
+</div>
+
+
+
+
+<div class="department">
+
+<i class="fa-solid fa-music"></i>
+
+<h4>
+
+Musiciens
+
+</h4>
+
+<p>
+
+25 membres
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="department">
+
+<i class="fa-solid fa-camera"></i>
+
+<h4>
+
+Média
+
+</h4>
+
+<p>
+
+18 membres
+
+</p>
+
+</div>
+
+
+
+
+
+
+<div class="department">
+
+<i class="fa-solid fa-microphone"></i>
+
+<h4>
+
+Artistes
+
+</h4>
+
+<p>
+
+20 membres
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="department">
+
+<i class="fa-solid fa-film"></i>
+
+<h4>
+
+Production
+
+</h4>
+
+<p>
+
+10 membres
+
+</p>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================
+        ACTIONS RAPIDES
+===================================== -->
+
+
+<section class="quick-actions">
+
+
+<h2>
+
+<i class="fa-solid fa-bolt"></i>
+
+Actions rapides
+
+</h2>
+
+
+
+<div class="actions">
+
+
+
+<a href="pages/membres.html">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Ajouter membre
+
+</a>
+
+
+
+
+<a href="pages/presences.html">
+
+<i class="fa-solid fa-check"></i>
+
+Faire présence
+
+</a>
+
+
+
+
+
+<a href="pages/rapports.html">
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+Créer rapport
+
+</a>
+
+
+
+
+
+<a href="pages/reunions.html">
+
+<i class="fa-solid fa-calendar-plus"></i>
+
+Nouvelle réunion
+
+</a>
+
+
+
+</div>
+
+
+
+</section>
+<!-- =====================================
+        STATISTIQUES GRAPHIQUES
+===================================== -->
+
+
+<section class="charts-section">
+
+
+<div class="panel chart-panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Evolution des présences
+
+</h2>
+
+
+<select>
+
+<option>Cette semaine</option>
+
+<option>Ce mois</option>
+
+<option>Cette année</option>
+
+</select>
+
+
+</div>
+
+
+<canvas id="presenceChart"></canvas>
+
+
+</div>
+
+
+
+
+
+<div class="panel chart-panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-chart-pie"></i>
+
+Répartition des départements
+
+</h2>
+
+
+</div>
+
+
+<canvas id="departmentChart"></canvas>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================
+        NOTIFICATIONS
+===================================== -->
+
+
+<section class="notifications-section">
+
+
+<div class="panel">
+
+
+<div class="panel-header">
+
+
+<h2>
+
+<i class="fa-solid fa-bell"></i>
+
+Notifications récentes
+
+</h2>
+
+
+<a href="pages/notifications.html">
+
+Voir tout
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+<div class="notification-item">
+
+
+<div class="notification-icon red">
+
+<i class="fa-solid fa-file-circle-check"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Nouveau rapport reçu
+
+</h4>
+
+
+<p>
+
+Le secrétariat a envoyé un rapport journalier.
+
+</p>
+
+
+<small>
+
+Il y a 10 minutes
+
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="notification-item">
+
+
+<div class="notification-icon blue">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Nouvelle réunion programmée
+
+</h4>
+
+
+<p>
+
+Réunion des coordinateurs demain à 16h.
+
+</p>
+
+
+<small>
+
+Il y a 1 heure
+
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="notification-item">
+
+
+<div class="notification-icon gold">
+
+<i class="fa-solid fa-microphone"></i>
+
+</div>
+
+
+<div>
+
+<h4>
+
+Session studio ajoutée
+
+</h4>
+
+
+<p>
+
+Nouvel enregistrement prévu.
+
+</p>
+
+
+<small>
+
+Hier
+
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        FOOTER
+===================================== -->
+
+
+<footer class="footer">
+
+
+<p>
+
+© 2026
+
+<strong>
+
+Aigle Royal Music Gospel
+
+</strong>
+
+-
+
+Système de Gestion Administrative
+
+</p>
+
+
+</footer>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        LIBRAIRIES
+===================================== -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script src="assets/js/dashboard.js"></script>
+
+
+
+</body>
+
+</html>

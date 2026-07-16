@@ -1,0 +1,2802 @@
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE 11
+ CONTRATS & REVENUS
+ CSS PARTIE 1/5
+====================================================*/
+
+
+
+/*==========================
+ RESET GENERAL
+==========================*/
+
+
+*{
+
+
+    margin:0;
+
+
+    padding:0;
+
+
+    box-sizing:border-box;
+
+
+    font-family:'Poppins',sans-serif;
+
+
+}
+
+
+
+
+body{
+
+
+    background:#f5f6fa;
+
+
+    color:#1f2937;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ SIDEBAR
+==========================*/
+
+
+.sidebar{
+
+
+    position:fixed;
+
+
+    left:0;
+
+
+    top:0;
+
+
+    width:260px;
+
+
+    height:100vh;
+
+
+    background:
+
+
+    linear-gradient(
+
+    180deg,
+
+    #111827,
+
+    #c62828
+
+    );
+
+
+    padding:25px 15px;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.brand{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.brand img{
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    border-radius:50%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+
+.brand h2{
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+.brand span{
+
+
+    color:#f4c542;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+.sidebar ul{
+
+
+    list-style:none;
+
+
+}
+
+
+
+
+
+.sidebar ul li{
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+
+.sidebar ul li a{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    padding:14px;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    border-radius:12px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.sidebar ul li.active a,
+.sidebar ul li:hover a{
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ CONTENU PRINCIPAL
+==========================*/
+
+
+.main-content{
+
+
+    margin-left:260px;
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ HEADER
+==========================*/
+
+
+.page-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+.page-header h1{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+
+
+.page-header h1 i{
+
+
+    color:#c62828;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+.page-header p{
+
+
+    color:#6b7280;
+
+
+    margin-top:8px;
+
+
+}
+
+
+
+
+
+
+.new-contract-btn{
+
+
+    padding:15px 25px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-weight:600;
+
+
+    background:
+
+
+    linear-gradient(
+
+    90deg,
+
+    #c62828,
+
+    #f4c542
+
+    );
+
+
+}
+
+
+
+
+
+
+.new-contract-btn i{
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ STATISTIQUES FINANCIERES
+==========================*/
+
+
+.finance-stats{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(5,1fr);
+
+
+    gap:20px;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+
+
+
+.finance-card{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:18px;
+
+
+    box-shadow:
+
+
+    0 10px 25px
+
+    rgba(0,0,0,.08);
+
+
+}
+
+
+
+
+
+
+.finance-card i{
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    border-radius:15px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    font-size:24px;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.finance-card h2{
+
+
+    font-size:23px;
+
+
+}
+
+
+
+
+
+.finance-card p{
+
+
+    color:#6b7280;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* COULEURS FINANCES */
+
+
+.finance-card.income i{
+
+
+    background:#16a34a;
+
+
+}
+
+
+
+
+
+.finance-card.expense i{
+
+
+    background:#dc2626;
+
+
+}
+
+
+
+
+
+.finance-card.profit i{
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+
+
+.finance-card.contract i{
+
+
+    background:#7c3aed;
+
+
+}
+
+
+
+
+
+.finance-card.pending i{
+
+
+    background:#ea580c;
+
+
+}
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE 11
+ CONTRATS & REVENUS
+ CSS PARTIE 2/5
+====================================================*/
+
+
+
+/*==========================
+ OUTILS RECHERCHE
+==========================*/
+
+
+.contract-tools{
+
+
+    background:white;
+
+
+    padding:25px;
+
+
+    border-radius:20px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:20px;
+
+
+    margin-bottom:35px;
+
+
+    box-shadow:
+
+
+    0 10px 25px
+
+    rgba(0,0,0,.06);
+
+
+}
+
+
+
+
+
+.search-box{
+
+
+    flex:1;
+
+
+    position:relative;
+
+
+}
+
+
+
+
+
+.search-box i{
+
+
+    position:absolute;
+
+
+    left:18px;
+
+
+    top:50%;
+
+
+    transform:translateY(-50%);
+
+
+    color:#9ca3af;
+
+
+}
+
+
+
+
+
+.search-box input{
+
+
+    width:100%;
+
+
+    padding:14px 20px 14px 50px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #ddd;
+
+
+    outline:none;
+
+
+}
+
+
+
+
+
+
+
+.search-box input:focus{
+
+
+    border-color:#c62828;
+
+
+}
+
+
+
+
+
+.contract-tools select{
+
+
+    padding:14px 20px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #ddd;
+
+
+    background:white;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ TITRE SECTION
+==========================*/
+
+
+.section-title{
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.section-title h2{
+
+
+    font-size:24px;
+
+
+}
+
+
+
+
+
+.section-title i{
+
+
+    color:#c62828;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ GRILLE CONTRATS
+==========================*/
+
+
+.contracts-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ CARTE CONTRAT
+==========================*/
+
+
+.contract-card{
+
+
+    background:white;
+
+
+    border-radius:22px;
+
+
+    padding:25px;
+
+
+    box-shadow:
+
+
+    0 10px 25px
+
+    rgba(0,0,0,.08);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.contract-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 20px 35px
+
+    rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+
+
+
+
+/* HEADER CARTE */
+
+
+.contract-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:flex-start;
+
+
+    padding-bottom:20px;
+
+
+    border-bottom:1px solid #eee;
+
+
+}
+
+
+
+
+
+.contract-title{
+
+
+    font-size:19px;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+
+
+.contract-artist{
+
+
+    color:#6b7280;
+
+
+}
+
+
+
+
+
+.contract-artist i{
+
+
+    color:#c62828;
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* STATUT */
+
+
+.contract-status{
+
+
+    padding:7px 15px;
+
+
+    border-radius:20px;
+
+
+    background:#dcfce7;
+
+
+    color:#166534;
+
+
+    font-size:12px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ CORPS CONTRAT
+==========================*/
+
+
+.contract-body{
+
+
+    padding:20px 0;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+
+.contract-info{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.contract-info i{
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    border-radius:10px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:#fef2f2;
+
+
+    color:#c62828;
+
+
+}
+
+
+
+
+
+
+
+.contract-info strong{
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+.contract-info p{
+
+
+    color:#6b7280;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ ACTIONS
+==========================*/
+
+
+.contract-actions{
+
+
+    display:flex;
+
+
+    justify-content:flex-end;
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+
+.contract-actions button{
+
+
+    width:38px;
+
+
+    height:38px;
+
+
+    border:none;
+
+
+    border-radius:10px;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.view-contract{
+
+
+    background:#2563eb;
+
+
+}
+
+
+
+
+
+.edit-contract{
+
+
+    background:#ea580c;
+
+
+}
+
+
+
+
+
+.delete-contract{
+
+
+    background:#dc2626;
+
+
+}
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE 11
+ CONTRATS & REVENUS
+ CSS PARTIE 3/5
+====================================================*/
+
+
+
+/*==========================
+ MODALES
+==========================*/
+
+
+.modal{
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:
+
+
+    rgba(0,0,0,.65);
+
+
+    display:none;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    z-index:1000;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.modal.active{
+
+
+    display:flex;
+
+
+}
+
+
+
+
+
+.modal-content{
+
+
+    background:white;
+
+
+    width:90%;
+
+
+    max-width:900px;
+
+
+    max-height:90vh;
+
+
+    overflow-y:auto;
+
+
+    border-radius:25px;
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+.modal-content.large{
+
+
+    max-width:1100px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ HEADER MODAL
+==========================*/
+
+
+.modal-header{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+.modal-header h2{
+
+
+    font-size:25px;
+
+
+}
+
+
+
+
+
+.modal-header h2 i{
+
+
+    color:#c62828;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+.modal-header button{
+
+
+    width:40px;
+
+
+    height:40px;
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+    cursor:pointer;
+
+
+    background:#fee2e2;
+
+
+    color:#dc2626;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ DETAIL CONTRAT
+==========================*/
+
+
+.contract-profile{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.detail-row{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    padding:15px;
+
+
+    background:#f9fafb;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+
+.detail-row strong{
+
+
+    color:#111827;
+
+
+}
+
+
+
+
+
+.detail-row span{
+
+
+    color:#6b7280;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ DESCRIPTION
+==========================*/
+
+
+.detail-description{
+
+
+    margin-top:25px;
+
+
+    padding:20px;
+
+
+    background:#fff7ed;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+
+.detail-description h3{
+
+
+    margin-bottom:12px;
+
+
+}
+
+
+
+
+
+.detail-description p{
+
+
+    color:#6b7280;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ SECTION FINANCE
+==========================*/
+
+
+.finance-section{
+
+
+    margin-top:25px;
+
+
+    padding:25px;
+
+
+    background:#f0fdf4;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.finance-section h3{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.finance-section h3 i{
+
+
+    color:#16a34a;
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+/*==========================
+ TABLEAU PAIEMENTS
+==========================*/
+
+
+.payment-history{
+
+
+    margin-top:30px;
+
+
+}
+
+
+
+
+
+.payment-history h3{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.payment-table{
+
+
+    width:100%;
+
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+
+
+.payment-table th{
+
+
+    background:#111827;
+
+
+    color:white;
+
+
+    padding:15px;
+
+
+    text-align:left;
+
+
+}
+
+
+
+
+
+.payment-table td{
+
+
+    padding:14px;
+
+
+    border-bottom:1px solid #eee;
+
+
+}
+
+
+
+
+
+.payment-table tr:hover{
+
+
+    background:#f9fafb;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ BADGES FINANCIERS
+==========================*/
+
+
+.payment-paid{
+
+
+    background:#dcfce7;
+
+
+    color:#166534;
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+.payment-pending{
+
+
+    background:#fef3c7;
+
+
+    color:#92400e;
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:12px;
+
+
+}
+
+
+
+
+
+.payment-failed{
+
+
+    background:#fee2e2;
+
+
+    color:#991b1b;
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:12px;
+
+
+}
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE 11
+ CONTRATS & REVENUS
+ CSS PARTIE 4/5
+====================================================*/
+
+
+
+/*==========================
+ FORMULAIRE CONTRAT
+==========================*/
+
+
+#contractForm{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ TITRES FORMULAIRE
+==========================*/
+
+
+.form-title{
+
+
+    font-size:20px;
+
+
+    color:#111827;
+
+
+    padding-bottom:10px;
+
+
+    border-bottom:2px solid #c62828;
+
+
+}
+
+
+
+
+
+.form-title i{
+
+
+    color:#c62828;
+
+
+    margin-right:10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ GRILLE FORMULAIRE
+==========================*/
+
+
+.form-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ CHAMPS
+==========================*/
+
+
+.form-group{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:8px;
+
+
+}
+
+
+
+
+
+.form-group label{
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+    color:#374151;
+
+
+}
+
+
+
+
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+
+    padding:14px;
+
+
+    border-radius:12px;
+
+
+    border:1px solid #ddd;
+
+
+    outline:none;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+.form-group textarea{
+
+
+    min-height:130px;
+
+
+    resize:none;
+
+
+}
+
+
+
+
+
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+
+    border-color:#c62828;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ SECTION FINANCIERE FORMULAIRE
+==========================*/
+
+
+.finance-section{
+
+
+    background:#f0fdf4;
+
+
+    padding:25px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.finance-section h3{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.finance-section h3 i{
+
+
+    color:#16a34a;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ SECTION DEPENSES
+==========================*/
+
+
+.expense-section{
+
+
+    background:#fff7ed;
+
+
+    padding:25px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.expense-section h3{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.expense-section h3 i{
+
+
+    color:#ea580c;
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ DOCUMENT CONTRAT
+==========================*/
+
+
+.document-section{
+
+
+    background:#f9fafb;
+
+
+    padding:25px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.document-section h3{
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.document-section h3 i{
+
+
+    color:#2563eb;
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+.document-section input{
+
+
+    width:100%;
+
+
+    padding:18px;
+
+
+    border:2px dashed #d1d5db;
+
+
+    border-radius:15px;
+
+
+    background:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ BOUTONS
+==========================*/
+
+
+.form-footer{
+
+
+    display:flex;
+
+
+    justify-content:flex-end;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.form-footer button{
+
+
+    padding:14px 30px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    cursor:pointer;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+
+
+.cancel-btn{
+
+
+    background:#e5e7eb;
+
+
+    color:#374151;
+
+
+}
+
+
+
+
+
+.save-contract{
+
+
+    background:
+
+
+    linear-gradient(
+
+    90deg,
+
+    #c62828,
+
+    #f4c542
+
+    );
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+.save-contract:hover{
+
+
+    opacity:.9;
+
+
+}
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE 11
+ CONTRATS & REVENUS
+ CSS PARTIE 5/5
+ FINALISATION
+====================================================*/
+
+
+
+/*==========================
+ ANIMATIONS
+==========================*/
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(20px);
+
+
+    }
+
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+.finance-card,
+.contract-card,
+.contract-tools{
+
+
+    animation:
+
+    fadeIn .5s ease;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ SCROLLBAR
+==========================*/
+
+
+::-webkit-scrollbar{
+
+
+    width:8px;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-track{
+
+
+    background:#f1f1f1;
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar-thumb{
+
+
+    background:#c62828;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ TABLETTE
+==========================*/
+
+
+@media(max-width:1200px){
+
+
+
+.finance-stats{
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+}
+
+
+
+
+
+.contracts-grid{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ TABLETTE PETITE
+==========================*/
+
+
+@media(max-width:900px){
+
+
+
+.sidebar{
+
+
+    width:80px;
+
+
+    padding:20px 10px;
+
+
+}
+
+
+
+
+
+.brand h2,
+.brand span,
+.sidebar a{
+
+
+    display:none;
+
+
+}
+
+
+
+
+
+.main-content{
+
+
+    margin-left:80px;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.page-header{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+
+.finance-stats{
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+}
+
+
+
+
+
+.contract-tools{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+.contract-tools select{
+
+
+    width:100%;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/*==========================
+ MOBILE
+==========================*/
+
+
+@media(max-width:600px){
+
+
+
+.sidebar{
+
+
+    display:none;
+
+
+}
+
+
+
+
+
+.main-content{
+
+
+    margin-left:0;
+
+
+    padding:15px;
+
+
+}
+
+
+
+
+
+.page-header h1{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+.finance-stats{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
+
+
+.contracts-grid{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
+
+
+.form-grid{
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+
+
+
+.modal-content{
+
+
+    width:100%;
+
+
+    padding:20px;
+
+
+}
+
+
+
+
+
+.detail-row{
+
+
+    flex-direction:column;
+
+
+    align-items:flex-start;
+
+
+    gap:8px;
+
+
+}
+
+
+
+
+
+.form-footer{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+.form-footer button{
+
+
+    width:100%;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ ETAT VIDE
+==========================*/
+
+
+.empty-contracts{
+
+
+    background:white;
+
+
+    padding:60px;
+
+
+    border-radius:20px;
+
+
+    text-align:center;
+
+
+    color:#6b7280;
+
+
+}
+
+
+
+
+
+.empty-contracts i{
+
+
+    font-size:50px;
+
+
+    color:#c62828;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/*==========================
+ NOTIFICATIONS
+==========================*/
+
+
+.notification{
+
+
+    position:fixed;
+
+
+    right:30px;
+
+
+    bottom:30px;
+
+
+    padding:18px 25px;
+
+
+    background:white;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+
+
+    0 15px 35px
+
+    rgba(0,0,0,.15);
+
+
+    z-index:2000;
+
+
+    animation:
+
+    fadeIn .3s ease;
+
+
+}
+
+
+
+
+
+
+
+.notification.success{
+
+
+    border-left:5px solid #16a34a;
+
+
+}
+
+
+
+
+
+.notification.error{
+
+
+    border-left:5px solid #dc2626;
+
+
+}
+
+
+
+
+
+
+
+/*==========================
+ BOUTONS GENERAUX
+==========================*/
+
+
+button{
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+button:hover{
+
+
+    transform:translateY(-2px);
+
+
+}

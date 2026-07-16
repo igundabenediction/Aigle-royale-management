@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Gestion des Rapports | Aigle Royal Music Gospel
+</title>
+
+
+
+<link rel="stylesheet" href="../assets/css/rapports.css">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+<!-- ==========================
+ SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<img src="assets/image/LOGO  1.jpg">
+
+
+
+<div>
+
+
+<h2>
+
+AIGLE ROYAL
+
+</h2>
+
+
+<span>
+
+Music Gospel
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+
+
+<a href="../dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Dashboard
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="membres.html">
+
+
+<i class="fa-solid fa-users"></i>
+
+Membres
+
+</a>
+
+
+</li>
+
+
+
+
+
+
+<li>
+
+
+<a href="presences.html">
+
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Présences
+
+</a>
+
+
+</li>
+
+
+
+
+
+
+<li class="active">
+
+
+<a href="rapports.html">
+
+
+<i class="fa-solid fa-file-lines"></i>
+
+Rapports
+
+</a>
+
+
+</li>
+
+
+
+
+
+<li>
+
+
+<a href="departements.html">
+
+
+<i class="fa-solid fa-building"></i>
+
+Départements
+
+</a>
+
+
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- ==========================
+ CONTENU
+========================== -->
+
+
+<main class="main-content">
+
+
+
+
+
+<header class="page-header">
+
+
+
+<div>
+
+
+<h1>
+
+Gestion des Rapports
+
+</h1>
+
+
+
+<p>
+
+Création et suivi des rapports administratifs du label.
+
+</p>
+
+
+
+</div>
+
+
+
+
+<button class="new-report-btn">
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+Nouveau rapport
+
+
+</button>
+
+
+
+</header>
+<!-- =====================================
+        STATISTIQUES RAPPORTS
+===================================== -->
+
+
+<section class="report-stats">
+
+
+
+<div class="report-card blue">
+
+
+<i class="fa-solid fa-file-lines"></i>
+
+
+<div>
+
+
+<h2 id="totalReports">
+
+0
+
+</h2>
+
+
+<p>
+
+Total Rapports
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="report-card green">
+
+
+<i class="fa-solid fa-calendar-day"></i>
+
+
+<div>
+
+
+<h2 id="dailyReports">
+
+0
+
+</h2>
+
+
+<p>
+
+Rapports du jour
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="report-card yellow">
+
+
+<i class="fa-solid fa-building"></i>
+
+
+<div>
+
+
+<h2 id="departmentReports">
+
+0
+
+</h2>
+
+
+<p>
+
+Départements
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="report-card red">
+
+
+<i class="fa-solid fa-download"></i>
+
+
+<div>
+
+
+<h2 id="downloadReports">
+
+0
+
+</h2>
+
+
+<p>
+
+Téléchargements
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        FILTRES RAPPORTS
+===================================== -->
+
+
+<section class="report-tools">
+
+
+
+<div class="search-report">
+
+
+<i class="fa-solid fa-search"></i>
+
+
+
+<input 
+
+type="text"
+
+id="searchReport"
+
+placeholder="Rechercher un rapport..."
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<select id="reportType">
+
+
+
+<option value="all">
+
+Tous les types
+
+</option>
+
+
+
+<option>
+
+Journalier
+
+</option>
+
+
+
+<option>
+
+Hebdomadaire
+
+</option>
+
+
+
+<option>
+
+Mensuel
+
+</option>
+
+
+
+<option>
+
+Activités
+
+</option>
+
+
+
+<option>
+
+Présences
+
+</option>
+
+
+
+<option>
+
+Administratif
+
+</option>
+
+
+
+</select>
+
+
+
+
+
+
+
+
+<select id="reportDepartment">
+
+
+
+<option value="all">
+
+Tous les départements
+
+</option>
+
+
+
+<option>
+
+Direction
+
+</option>
+
+
+
+<option>
+
+Secrétariat
+
+</option>
+
+
+
+<option>
+
+Production
+
+</option>
+
+
+
+<option>
+
+Corporation
+
+</option>
+
+
+
+<option>
+
+Artistes
+
+</option>
+
+
+
+<option>
+
+Médias
+
+</option>
+
+
+
+<option>
+
+Musiciens
+
+</option>
+
+
+
+</select>
+
+
+
+
+
+
+
+<input 
+
+type="date"
+
+id="reportDateFilter"
+
+>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        TABLEAU RAPPORTS
+===================================== -->
+
+
+<section class="reports-table">
+
+
+
+
+
+<div class="table-header">
+
+
+<h2>
+
+
+<i class="fa-solid fa-folder-open"></i>
+
+
+Archives des rapports
+
+
+</h2>
+
+
+
+<button class="export-all">
+
+
+<i class="fa-solid fa-file-pdf"></i>
+
+
+Exporter tout
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Date
+
+</th>
+
+
+<th>
+
+Titre
+
+</th>
+
+
+<th>
+
+Type
+
+</th>
+
+
+<th>
+
+Département
+
+</th>
+
+
+<th>
+
+Auteur
+
+</th>
+
+
+<th>
+
+Actions
+
+</th>
+
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+
+<tbody id="reportsList">
+
+
+
+
+
+
+<tr>
+
+
+<td>
+
+15/07/2026
+
+</td>
+
+
+
+<td>
+
+Rapport présence équipe
+
+</td>
+
+
+
+<td>
+
+Présences
+
+</td>
+
+
+
+<td>
+
+Secrétariat
+
+</td>
+
+
+
+<td>
+
+IGUNDA BENEDICTION
+
+</td>
+
+
+
+<td>
+
+
+<button class="view-btn">
+
+<i class="fa-solid fa-eye"></i>
+
+</button>
+
+
+
+
+<button class="pdf-btn">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+</button>
+
+
+
+
+
+<button class="delete-btn">
+
+<i class="fa-solid fa-trash"></i>
+
+</button>
+
+
+
+</td>
+
+
+</tr>
+
+
+
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+
+</section>
+<!-- =====================================
+        MODAL NOUVEAU RAPPORT
+===================================== -->
+
+
+<div class="modal" id="reportModal">
+
+
+
+<div class="modal-content">
+
+
+
+<div class="modal-header">
+
+
+
+<h2>
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+Créer un rapport
+
+</h2>
+
+
+
+
+
+<button id="closeReportModal">
+
+
+<i class="fa-solid fa-xmark"></i>
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<form id="reportForm">
+
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Titre du rapport
+
+</label>
+
+
+<input
+
+type="text"
+
+id="reportTitle"
+
+placeholder="Ex: Rapport activité mensuel"
+
+required
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Type de rapport
+
+</label>
+
+
+
+<select id="newReportType">
+
+
+<option>
+
+Journalier
+
+</option>
+
+
+<option>
+
+Hebdomadaire
+
+</option>
+
+
+<option>
+
+Mensuel
+
+</option>
+
+
+<option>
+
+Activités
+
+</option>
+
+
+<option>
+
+Présences
+
+</option>
+
+
+<option>
+
+Administratif
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Département
+
+</label>
+
+
+
+<select id="newReportDepartment">
+
+
+<option>
+
+Direction
+
+</option>
+
+
+<option>
+
+Secrétariat
+
+</option>
+
+
+<option>
+
+Production
+
+</option>
+
+
+<option>
+
+Corporation
+
+</option>
+
+
+<option>
+
+Artistes
+
+</option>
+
+
+<option>
+
+Médias
+
+</option>
+
+
+<option>
+
+Musiciens
+
+</option>
+
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Date du rapport
+
+</label>
+
+
+
+<input
+
+type="date"
+
+id="newReportDate"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Responsable
+
+</label>
+
+
+<input
+
+type="text"
+
+id="reportAuthor"
+
+placeholder="Nom du responsable"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Pièce jointe
+
+</label>
+
+
+<input
+
+type="file"
+
+id="reportFile"
+
+accept=".pdf,.doc,.docx,image/*"
+
+>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-group full">
+
+
+<label>
+
+Description du rapport
+
+</label>
+
+
+
+<textarea
+
+id="reportDescription"
+
+placeholder="Résumé du rapport..."
+
+></textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="form-footer">
+
+
+
+<button
+
+type="button"
+
+class="cancel-btn"
+
+id="cancelReport"
+
+>
+
+Annuler
+
+</button>
+
+
+
+
+
+<button
+
+type="submit"
+
+class="save-report"
+
+>
+
+<i class="fa-solid fa-save"></i>
+
+
+Enregistrer
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+</div>
+
+
+</div>
+<!-- =====================================
+        FOOTER
+===================================== -->
+
+
+<footer class="footer">
+
+
+<p>
+
+
+© 2026
+
+<strong>
+
+Aigle Royal Music Gospel
+
+</strong>
+
+
+-
+
+Système de Gestion des Rapports
+
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<!-- =====================================
+        BIBLIOTHEQUE PDF
+===================================== -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+
+
+
+
+
+
+<!-- =====================================
+        JAVASCRIPT RAPPORTS
+===================================== -->
+
+
+<script src="../assets/js/rapports.js"></script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
