@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>
+
+Connexion | Aigle Royal Music Gospel
+
+</title>
+
+
+
+
+<link rel="stylesheet" href="../assets/css/utilisateurs.css">
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+
+
+
+<link rel="stylesheet"
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+<div class="login-container">
+
+
+
+
+
+
+
+<!-- LOGO -->
+
+
+
+<div class="login-brand">
+
+
+
+<img src="assets/image/LOGO  1.jpg" alt="Logo Aigle Royal">
+
+
+
+
+
+<h1>
+
+AIGLE ROYAL
+
+</h1>
+
+
+
+<p>
+
+Music Gospel
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- FORMULAIRE -->
+
+
+
+<div class="login-box">
+
+
+
+
+
+<h2>
+
+Connexion Bureau
+
+</h2>
+
+
+
+
+
+<p>
+
+Accédez au système de gestion du label
+
+</p>
+
+
+
+
+
+
+
+
+
+<form id="loginForm">
+
+
+
+
+
+<div class="input-group">
+
+
+
+<i class="fa-solid fa-envelope"></i>
+
+
+
+
+<input
+
+type="email"
+
+id="loginEmail"
+
+placeholder="Adresse email"
+
+required
+
+>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+
+<i class="fa-solid fa-lock"></i>
+
+
+
+
+
+<input
+
+type="password"
+
+id="loginPassword"
+
+placeholder="Mot de passe"
+
+required
+
+>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="remember">
+
+
+
+<label>
+
+
+
+<input
+
+type="checkbox"
+
+id="rememberMe"
+
+>
+
+
+
+Se souvenir de moi
+
+
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<button
+
+type="submit"
+
+class="login-btn"
+
+>
+
+
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+
+Se connecter
+
+
+
+</button>
+
+
+
+
+
+
+
+<p
+
+id="loginMessage"
+
+class="login-message"
+
+></p>
+
+
+
+
+
+
+</form>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<!-- =====================================
+        INFORMATIONS SYSTEME
+===================================== -->
+
+
+<div class="system-info">
+
+
+
+
+
+<div class="info-item">
+
+
+<i class="fa-solid fa-shield-halved"></i>
+
+
+
+<div>
+
+
+<h3>
+
+Sécurité
+
+</h3>
+
+
+<p>
+
+Accès protégé par authentification
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="info-item">
+
+
+<i class="fa-solid fa-users-gear"></i>
+
+
+
+<div>
+
+
+<h3>
+
+Gestion équipe
+
+</h3>
+
+
+<p>
+
+Permissions par rôle utilisateur
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="info-item">
+
+
+<i class="fa-solid fa-database"></i>
+
+
+
+<div>
+
+
+<h3>
+
+Données sécurisées
+
+</h3>
+
+
+<p>
+
+Synchronisation Firebase
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+        FOOTER CONNEXION
+===================================== -->
+
+
+<footer class="login-footer">
+
+
+
+<p>
+
+
+© 2026
+
+<strong>
+
+Aigle Royal Music Gospel
+
+</strong>
+
+
+
+<br>
+
+
+
+Système de Gestion Organisationnelle
+
+
+
+</p>
+
+
+
+<span>
+
+
+Version 1.0.0
+
+
+</span>
+
+
+
+
+</footer>
+
+
+
+
+
+<!-- =====================================
+        FIREBASE
+===================================== -->
+
+
+<script type="module">
+
+
+// Firebase SDK
+
+import {
+
+initializeApp
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+
+
+
+
+import {
+
+getAuth,
+
+signInWithEmailAndPassword,
+
+onAuthStateChanged
+
+}
+
+from
+
+"https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+
+
+
+
+
+
+// Configuration Firebase
+
+const firebaseConfig = {
+
+
+
+apiKey:
+
+"VOTRE_API_KEY",
+
+
+
+authDomain:
+
+"VOTRE_PROJECT.firebaseapp.com",
+
+
+
+projectId:
+
+"VOTRE_PROJECT_ID",
+
+
+
+storageBucket:
+
+"VOTRE_PROJECT.appspot.com",
+
+
+
+messagingSenderId:
+
+"VOTRE_ID",
+
+
+
+appId:
+
+"VOTRE_APP_ID"
+
+
+
+};
+
+
+
+
+
+
+
+
+
+// Initialisation
+
+
+const app =
+
+initializeApp(firebaseConfig);
+
+
+
+
+
+const auth =
+
+getAuth(app);
+
+
+
+
+
+
+
+
+
+// =====================================
+// CONNEXION UTILISATEUR
+// =====================================
+
+
+const loginForm =
+
+document.getElementById(
+"loginForm"
+);
+
+
+
+
+
+loginForm.addEventListener(
+
+"submit",
+
+async(e)=>{
+
+
+
+e.preventDefault();
+
+
+
+
+
+const email =
+
+document.getElementById(
+"loginEmail"
+).value;
+
+
+
+
+
+const password =
+
+document.getElementById(
+"loginPassword"
+).value;
+
+
+
+
+
+const message =
+
+document.getElementById(
+"loginMessage"
+);
+
+
+
+
+
+
+
+
+try{
+
+
+
+
+
+await signInWithEmailAndPassword(
+
+auth,
+
+email,
+
+password
+
+);
+
+
+
+
+
+
+
+message.innerHTML =
+
+"Connexion réussie...";
+
+
+
+message.style.color="#0a8f3c";
+
+
+
+
+
+
+
+setTimeout(()=>{
+
+
+
+window.location.href=
+
+"../dashboard.html";
+
+
+
+},1500);
+
+
+
+
+
+
+
+}
+
+catch(error){
+
+
+
+
+
+message.innerHTML =
+
+"Email ou mot de passe incorrect";
+
+
+
+message.style.color="#d00000";
+
+
+
+
+
+}
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+// =====================================
+// VERIFICATION SESSION
+// =====================================
+
+
+onAuthStateChanged(
+
+auth,
+
+(user)=>{
+
+
+
+
+
+if(user){
+
+
+
+console.log(
+
+"Utilisateur connecté :",
+
+user.email
+
+);
+
+
+
+}
+
+
+
+}
+
+);
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

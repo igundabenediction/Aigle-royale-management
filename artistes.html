@@ -1,0 +1,2249 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Gestion des Artistes | Aigle Royal Music Gospel
+</title>
+
+
+<link rel="stylesheet"
+href="../assets/css/artistes.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+ SIDEBAR
+========================== -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<img src="assets/image/LOGO  1.jpg">
+
+
+
+<div>
+
+
+<h2>
+
+Aigle Royal
+
+</h2>
+
+
+<span>
+
+Music Gospel
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<nav>
+
+
+<ul>
+
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa fa-home"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+
+
+
+
+<li class="active">
+
+<a href="artistes.html">
+
+<i class="fa fa-user-music"></i>
+
+Artistes
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="productions.html">
+
+<i class="fa fa-music"></i>
+
+Productions
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="albums.html">
+
+<i class="fa fa-record-vinyl"></i>
+
+Albums
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="rapports.html">
+
+<i class="fa fa-chart-line"></i>
+
+Rapports
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+
+
+</aside>
+
+
+
+
+
+
+<!-- =========================
+ CONTENU PRINCIPAL
+========================== -->
+
+
+<main class="main-content">
+
+
+
+
+
+<header class="page-header">
+
+
+
+<div>
+
+
+<h1>
+
+
+<i class="fa fa-user-music"></i>
+
+
+Gestion des Artistes
+
+
+</h1>
+
+
+
+
+<p>
+
+
+Gérez les talents, profils et carrières musicales
+
+
+</p>
+
+
+</div>
+
+
+
+
+<button class="new-artist-btn">
+
+
+<i class="fa fa-plus"></i>
+
+
+Nouvel Artiste
+
+
+</button>
+
+
+
+</header>
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE ARTISTES
+ HTML PARTIE 2/5
+====================================================*/
+
+
+<!-- =========================
+ STATISTIQUES ARTISTES
+========================== -->
+
+
+<section class="artist-stats">
+
+
+
+<div class="stat-card blue">
+
+
+<i class="fa fa-users"></i>
+
+
+<div>
+
+<h2 id="totalArtists">
+
+0
+
+</h2>
+
+
+<p>
+
+Total Artistes
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="stat-card green">
+
+
+<i class="fa fa-check-circle"></i>
+
+
+<div>
+
+
+<h2 id="activeArtists">
+
+0
+
+</h2>
+
+
+<p>
+
+Artistes Actifs
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card orange">
+
+
+<i class="fa fa-music"></i>
+
+
+<div>
+
+
+<h2 id="totalAlbumsArtist">
+
+0
+
+</h2>
+
+
+<p>
+
+Albums
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card purple">
+
+
+<i class="fa fa-record-vinyl"></i>
+
+
+<div>
+
+
+<h2 id="totalProductionsArtist">
+
+0
+
+</h2>
+
+
+<p>
+
+Productions
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card red">
+
+
+<i class="fa fa-chart-line"></i>
+
+
+<div>
+
+
+<h2 id="artistRevenue">
+
+0 $
+
+</h2>
+
+
+<p>
+
+Revenus
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+ OUTILS RECHERCHE
+========================== -->
+
+
+<section class="artist-tools">
+
+
+
+
+
+<div class="search-box">
+
+
+<i class="fa fa-search"></i>
+
+
+<input
+
+
+type="search"
+
+
+id="searchArtist"
+
+
+placeholder="Rechercher un artiste..."
+
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<select id="filterArtistStatus">
+
+
+<option value="all">
+
+Tous les statuts
+
+</option>
+
+
+<option>
+
+Actif
+
+</option>
+
+
+<option>
+
+Pause
+
+</option>
+
+
+<option>
+
+Ancien
+
+</option>
+
+
+</select>
+
+
+
+
+
+
+
+<select id="filterGenre">
+
+
+<option value="all">
+
+Tous les genres
+
+</option>
+
+
+<option>
+
+Gospel
+
+</option>
+
+
+<option>
+
+Worship
+
+</option>
+
+
+<option>
+
+Chorale
+
+</option>
+
+
+<option>
+
+Rap Gospel
+
+</option>
+
+
+</select>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+ LISTE ARTISTES
+========================== -->
+
+
+<section class="artists-container">
+
+
+
+
+
+<div class="section-title">
+
+
+<h2>
+
+
+<i class="fa fa-users"></i>
+
+
+Catalogue des Artistes
+
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<div class="artists-grid" id="artistsGrid">
+
+
+
+
+
+<!--
+
+
+Les profils artistes
+
+seront chargés automatiquement
+
+
+-->
+
+
+
+
+
+</div>
+
+
+
+</section>
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE ARTISTES
+ HTML PARTIE 3/5
+====================================================*/
+
+
+<!-- =========================
+ MODELE CARTE ARTISTE
+========================== -->
+
+
+<template id="artistCardTemplate">
+
+
+
+<div class="artist-card">
+
+
+
+<div class="artist-cover">
+
+
+<img
+
+class="artist-image"
+
+src="../assets/images/default-artist.jpg"
+
+alt="Artiste"
+
+>
+
+
+
+
+
+<div class="artist-overlay">
+
+
+
+<button class="view-artist">
+
+
+<i class="fa fa-eye"></i>
+
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="artist-info">
+
+
+
+<h3 class="artist-name">
+
+Nom Artiste
+
+</h3>
+
+
+
+
+
+<p class="artist-stage">
+
+
+<i class="fa fa-microphone"></i>
+
+
+Nom de scène
+
+
+</p>
+
+
+
+
+
+
+<div class="artist-tags">
+
+
+
+<span class="artist-genre">
+
+Gospel
+
+</span>
+
+
+
+
+<span class="artist-status">
+
+Actif
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="artist-actions">
+
+
+
+<button class="view-profile">
+
+
+<i class="fa fa-user"></i>
+
+
+</button>
+
+
+
+
+
+<button class="edit-artist">
+
+
+<i class="fa fa-edit"></i>
+
+
+</button>
+
+
+
+
+
+<button class="delete-artist">
+
+
+<i class="fa fa-trash"></i>
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</template>
+
+
+
+
+
+
+
+<!-- =========================
+ MODALE PROFIL ARTISTE
+========================== -->
+
+
+<div class="modal" id="artistProfileModal">
+
+
+
+<div class="modal-content artist-profile">
+
+
+
+
+
+
+<div class="modal-header">
+
+
+
+<h2>
+
+
+<i class="fa fa-user-music"></i>
+
+
+Profil Artiste
+
+
+</h2>
+
+
+
+
+
+<button id="closeArtistProfile">
+
+
+<i class="fa fa-times"></i>
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="profile-header">
+
+
+
+
+
+<img
+
+
+id="profileArtistImage"
+
+
+src="../assets/images/default-artist.jpg"
+
+
+
+>
+
+
+
+
+
+
+
+<div>
+
+
+<h2 id="profileArtistName">
+
+
+Nom Artiste
+
+
+</h2>
+
+
+
+
+<p id="profileStageName">
+
+
+Nom de scène
+
+
+</p>
+
+
+
+
+<span id="profileStatus">
+
+
+Actif
+
+
+</span>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="profile-information">
+
+
+
+
+
+<div>
+
+
+<h4>
+
+
+Biographie
+
+
+</h4>
+
+
+<p id="profileBio">
+
+
+Présentation artiste...
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-grid">
+
+
+
+
+
+<p>
+
+
+<i class="fa fa-location-dot"></i>
+
+
+<span id="profileCountry">
+
+Pays
+
+</span>
+
+
+</p>
+
+
+
+
+
+<p>
+
+
+<i class="fa fa-music"></i>
+
+
+<span id="profileGenre">
+
+Genre
+
+</span>
+
+
+</p>
+
+
+
+
+
+
+<p>
+
+
+<i class="fa fa-calendar"></i>
+
+
+<span id="profileStart">
+
+Début carrière
+
+</span>
+
+
+</p>
+
+
+
+
+
+<p>
+
+
+<i class="fa fa-money-bill"></i>
+
+
+<span id="profileIncome">
+
+Revenus
+
+</span>
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- =========================
+ RESEAUX SOCIAUX
+========================== -->
+
+
+<div class="social-section">
+
+
+<h3>
+
+
+<i class="fa fa-share-nodes"></i>
+
+
+Réseaux sociaux
+
+
+</h3>
+
+
+
+<div class="social-links">
+
+
+
+<a id="youtubeArtist">
+
+
+<i class="fab fa-youtube"></i>
+
+</a>
+
+
+
+
+<a id="facebookArtist">
+
+
+<i class="fab fa-facebook"></i>
+
+</a>
+
+
+
+
+
+<a id="instagramArtist">
+
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+
+
+
+
+<a id="spotifyArtist">
+
+
+<i class="fab fa-spotify"></i>
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- =========================
+ DISCOGRAPHIE
+========================== -->
+
+
+<div class="discography-section">
+
+
+
+<h3>
+
+
+<i class="fa fa-record-vinyl"></i>
+
+
+Discographie
+
+
+</h3>
+
+
+
+
+
+<table>
+
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+
+Titre
+
+</th>
+
+
+<th>
+
+Type
+
+</th>
+
+
+<th>
+
+Année
+
+</th>
+
+
+<th>
+
+Statut
+
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+
+
+<tbody id="artistDiscography">
+
+
+</tbody>
+
+
+
+
+</table>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE ARTISTES
+ HTML PARTIE 4/5
+====================================================*/
+
+
+<!-- =========================
+ MODALE AJOUT ARTISTE
+========================== -->
+
+
+<div class="modal" id="artistModal">
+
+
+
+<div class="modal-content large">
+
+
+
+
+
+<div class="modal-header">
+
+
+
+<h2>
+
+
+<i class="fa fa-user-plus"></i>
+
+
+Nouvel Artiste
+
+
+</h2>
+
+
+
+
+<button id="closeArtistModal">
+
+
+<i class="fa fa-times"></i>
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<form id="artistForm">
+
+
+
+
+
+<!-- INFORMATIONS GENERALES -->
+
+
+
+<h3 class="form-title">
+
+
+<i class="fa fa-user"></i>
+
+
+Informations personnelles
+
+
+</h3>
+
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Nom complet
+
+</label>
+
+
+<input
+
+type="text"
+
+id="artistName"
+
+placeholder="Nom complet"
+
+required
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Nom de scène
+
+</label>
+
+
+<input
+
+type="text"
+
+id="stageName"
+
+placeholder="Nom artistique"
+
+required
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Pays
+
+</label>
+
+
+<input
+
+type="text"
+
+id="artistCountry"
+
+placeholder="Pays"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Ville
+
+</label>
+
+
+<input
+
+type="text"
+
+id="artistCity"
+
+placeholder="Ville"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Genre musical
+
+</label>
+
+
+<select id="artistGenre">
+
+
+<option>
+
+Gospel
+
+</option>
+
+
+<option>
+
+Worship
+
+</option>
+
+
+<option>
+
+Chorale
+
+</option>
+
+
+<option>
+
+Rap Gospel
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Année début carrière
+
+</label>
+
+
+<input
+
+type="number"
+
+id="careerStart"
+
+value="2026"
+
+>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BIOGRAPHIE -->
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Biographie
+
+</label>
+
+
+
+<textarea
+
+id="artistBio"
+
+placeholder="Présentation de l'artiste..."
+
+></textarea>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- PHOTO ARTISTE -->
+
+
+
+<div class="upload-section">
+
+
+<h3>
+
+
+<i class="fa fa-image"></i>
+
+
+Photo artiste
+
+
+</h3>
+
+
+
+
+<input
+
+type="file"
+
+id="artistPhoto"
+
+accept="image/*"
+
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CONTRAT -->
+
+
+
+<div class="contract-section">
+
+
+
+<h3>
+
+
+<i class="fa fa-file-contract"></i>
+
+
+Contrat Artiste
+
+
+</h3>
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Statut
+
+</label>
+
+
+
+<select id="artistStatus">
+
+
+<option>
+
+Actif
+
+</option>
+
+
+<option>
+
+Pause
+
+</option>
+
+
+<option>
+
+Ancien
+
+</option>
+
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Date signature
+
+</label>
+
+
+
+<input
+
+type="date"
+
+id="contractDate"
+
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Durée contrat
+
+</label>
+
+
+
+<input
+
+type="text"
+
+id="contractDuration"
+
+placeholder="Ex: 3 ans"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Revenus artiste
+
+</label>
+
+
+
+<input
+
+type="number"
+
+id="artistIncome"
+
+value="0"
+
+
+>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- RESEAUX SOCIAUX -->
+
+
+
+<div class="social-form">
+
+
+
+<h3>
+
+
+<i class="fa fa-share-nodes"></i>
+
+
+Réseaux sociaux
+
+
+</h3>
+
+
+
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+YouTube
+
+</label>
+
+
+<input
+
+type="url"
+
+id="artistYoutube"
+
+placeholder="Lien YouTube"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Facebook
+
+</label>
+
+
+<input
+
+type="url"
+
+id="artistFacebook"
+
+placeholder="Lien Facebook"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Instagram
+
+</label>
+
+
+<input
+
+type="url"
+
+id="artistInstagram"
+
+placeholder="Lien Instagram"
+
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Spotify
+
+</label>
+
+
+<input
+
+type="url"
+
+id="artistSpotify"
+
+placeholder="Lien Spotify"
+
+>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- NOTES INTERNES -->
+
+
+
+<div class="form-group">
+
+
+<label>
+
+Notes internes
+
+</label>
+
+
+<textarea
+
+id="artistNotes"
+
+placeholder="Informations internes du label..."
+
+></textarea>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BOUTONS -->
+
+
+
+<div class="form-footer">
+
+
+
+<button
+
+type="button"
+
+class="cancel-btn"
+
+id="cancelArtist">
+
+
+Annuler
+
+
+</button>
+
+
+
+
+
+
+<button
+
+type="submit"
+
+class="save-artist">
+
+
+Enregistrer l'artiste
+
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+</form>
+
+
+
+
+
+</div>
+
+
+
+</div>
+/*====================================================
+ AIGLE ROYAL MUSIC GOSPEL
+ MODULE ARTISTES
+ HTML PARTIE 5/5
+ FINALISATION
+====================================================*/
+
+
+
+<!-- =========================
+ FOOTER
+========================== -->
+
+
+<footer class="footer">
+
+
+<p>
+
+
+© 2026
+
+<strong>
+
+Aigle Royal Music Gospel
+
+</strong>
+
+
+|
+
+Gestion Professionnelle des Artistes
+
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+<!-- =========================
+ FIREBASE
+========================== -->
+
+
+<script type="module">
+
+
+
+import {
+
+
+initializeApp
+
+
+}
+
+from
+
+
+"https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+
+
+
+
+import {
+
+
+getFirestore
+
+
+}
+
+from
+
+
+"https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+
+
+
+
+
+
+import {
+
+
+getStorage
+
+
+}
+
+from
+
+
+"https://www.gstatic.com/firebasejs/11.0.2/firebase-storage.js";
+
+
+
+
+
+
+
+
+const firebaseConfig = {
+
+
+apiKey:
+
+"VOTRE_API_KEY",
+
+
+
+authDomain:
+
+"VOTRE_PROJET.firebaseapp.com",
+
+
+
+projectId:
+
+"VOTRE_PROJECT_ID",
+
+
+
+storageBucket:
+
+"VOTRE_PROJET.appspot.com",
+
+
+
+messagingSenderId:
+
+"VOTRE_SENDER_ID",
+
+
+
+appId:
+
+"VOTRE_APP_ID"
+
+
+};
+
+
+
+
+
+
+
+
+
+const app = initializeApp(
+
+firebaseConfig
+
+);
+
+
+
+
+
+const db = getFirestore(app);
+
+
+
+
+
+const storage = getStorage(app);
+
+
+
+
+
+
+
+
+window.firebaseDB = db;
+
+
+
+window.firebaseStorage = storage;
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+<!-- =========================
+ JAVASCRIPT MODULE
+========================== -->
+
+
+<script
+
+src="../assets/js/artistes.js">
+
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+</html>
